@@ -40,15 +40,15 @@
             },
             {
                 "command": "nand2tetris.cpu",
-                "title": "Nand2Tetris: Open CPU Simulator"
+                "title": "Nand2Tetris: Open CPU Emulator"
             },
             {
                 "command": "nand2tetris.vm",
-                "title": "Nand2Tetris: Open VM Simulator"
+                "title": "Nand2Tetris: Open VM Emulator"
             },
             {
                 "command": "nand2tetris.assembler",
-                "title": "Nand2Tetris: Open Assembler Simulator"
+                "title": "Nand2Tetris: Open Assembler"
             },
             {
                 "command": "nand2tetris.stop",
