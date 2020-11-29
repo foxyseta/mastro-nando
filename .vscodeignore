@@ -1,7 +1,15 @@
 .vscode/**
 .vscode-test/**
+out/test/**
+src/**
 .gitignore
+.yarnrc
 vsc-extension-quickstart.md
+**/tsconfig.json
+**/.eslintrc.json
+**/*.map
+**/*.ts
+
 Hardware Simulator.dat
 CPU Emulator.dat
 Assembler.dat
