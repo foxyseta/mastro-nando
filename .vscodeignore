@@ -10,6 +10,8 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 
+images/*.xfc
+
 Hardware Simulator.dat
 CPU Emulator.dat
 Assembler.dat

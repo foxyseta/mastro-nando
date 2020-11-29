@@ -1,31 +1,41 @@
 {
-    "name": "nand2tetris",
-    "displayName": "Nand2Tetris Tools",
-    "description": "A Tools Set for the Open Course Nand2Tetris.",
-    "version": "1.1.1",
-    "icon": "images/icon.png",
-    "publisher": "leafvmaple",
+    "name": "mastro-nando",
+    "version": "1.0.0",
+    "publisher": "foxyseta",
     "engines": {
         "vscode": "^1.51.0"
+    },
+    "displayName": "Nand2Tetris Tools",
+    "description": "A Visual Studio Code extenstion for Nand2Tetris development based on Zohar Lee's 'Nand2Tetris Tools'.",
+    "author": {
+        "name": "Stefano Volpe"
     },
     "categories": [
         "Programming Languages",
         "Snippets"
     ],
-    "license": "MIT",
+    "keywords": [
+        "nand2tetris",
+        "nand",
+        "tetris",
+        "education",
+        "course"
+    ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/leafvmaple/vscode-nand2tetris.git"
+        "url": "https://github.com/foxyseta/mastro-nando"
     },
-    "activationEvents": [
-        "onCommand:nand2tetris.run",
-        "onCommand:nand2tetris.hardware",
-        "onCommand:nand2tetris.cpu",
-        "onCommand:nand2tetris.vm",
-        "onCommand:nand2tetris.assembler",
-        "onCommand:nand2tetris.stop",
-        "onCommand:nand2tetris.zip"
-    ],
+    "homepage": "https://github.com/FoxySeta/mastro-nando/blob/master/README.md",
+    "license": "SEE LICENSE IN 'LICENSE'",
+    "bugs": {
+        "url": "https://github.com/FoxySeta/mastro-nando/issues",
+        "email": "stefano.volpe2@studio.unibo.it"
+    },
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#555555",
+        "theme": "light"
+    },
     "main": "./out/extension",
     "contributes": {
         "commands": [
@@ -226,14 +236,15 @@
             }
         ]
     },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "pretest": "npm run compile && npm run lint",
-        "lint": "eslint src --ext ts",
-        "test": "node ./out/test/runTest.js"
-    },
+    "activationEvents": [
+        "onCommand:nand2tetris.run",
+        "onCommand:nand2tetris.hardware",
+        "onCommand:nand2tetris.cpu",
+        "onCommand:nand2tetris.vm",
+        "onCommand:nand2tetris.assembler",
+        "onCommand:nand2tetris.stop",
+        "onCommand:nand2tetris.zip"
+    ],
     "dependencies": {
         "tree-kill": "^1.1.0",
         "compressing": "^1.4.0"
@@ -250,5 +261,13 @@
         "mocha": "^8.1.3",
         "typescript": "^4.0.2",
         "vscode-test": "^1.4.0"
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
     }
 }
