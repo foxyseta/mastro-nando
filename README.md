@@ -1,5 +1,7 @@
 # Mastro NANDo
 
+![Mastro NANDo Logo](images/icon.png)
+
 ## Introduction
 
 A [Visual Studio Code](https://code.visualstudio.com/) extension for [Nand2Tetris](https://www.nand2tetris.org/) development based on [Zohar Lee](https://github.com/leafvmaple/)'s ["Nand2Tetris Tools"](https://github.com/leafvmaple/vscode-nand2tetris).
@@ -22,7 +24,7 @@ Jack Language | `.jack` | ✔︎ |
 
 Name | Requires Nand to Tetris Software Suite | Description
 ---- | -------------------------------------- | -----------
-Run Code | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `.vm`) via CLI
+Run Code ![Run Code button](images/button.png) | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `.vm`) via CLI
 Open Hardware Simulator | ✔︎ | Runs the Hardware Simulator via GUI
 Open CPU Emulator | ✔︎ | Runs the CPU Simulator via GUI
 Open VM Emulator | ✔︎ | Runs the VM Emulator via GUI
