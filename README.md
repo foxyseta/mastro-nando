@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A [Visual Studio Code](https://code.visualstudio.com/) extension for [Nand2Tetris](https://www.nand2tetris.org/) development based on Zohar Lee (@leafvmaple)'s "Nand2Tetris Tools".
+A [Visual Studio Code](https://code.visualstudio.com/) extension for [Nand2Tetris](https://www.nand2tetris.org/) development based on [Zohar Lee](https://github.com/leafvmaple/)'s ["Nand2Tetris Tools"](https://github.com/leafvmaple/vscode-nand2tetris).
 It empowers an incorporated release of the [Nand to Tetris Software Suite](https://www.nand2tetris.org/software) with various Visual Studio Code functionalities. This extension is meant for students, instructors, and self-learners who want to enhance their Nand2Tetris experience.
 
 ## Features
