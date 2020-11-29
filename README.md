@@ -20,7 +20,15 @@ Jack Language | `.jack` | ✔︎ |
 
 ### Commands
 
-_TODO_
+Name | Requires Nand to Tetris Software Suite | Description
+---- | -------------------------------------- | -----------
+Run Code | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `.vm`) via CLI
+Open Hardware Simulator | ✔︎ | Runs the Hardware Simulator via GUI
+Open CPU Emulator | ✔︎ | Runs the CPU Simulator via GUI
+Open VM Emulator | ✔︎ | Runs the VM Emulator via GUI
+Assembler | ✔︎ | Runs the Assembler via GUI
+Stop Running | ✔︎ | Aborts code execution
+Zip course source | | Compresses your solution to a zip archive
 
 ## User setup
 
@@ -40,45 +48,3 @@ You may also visit the [Visual Studio Code Marketplace](https://marketplace.visu
 ## Contributor setup
 
 After cloning this [GitHub repository](https://github.com/foxyseta/mastro-nando), you might want to follow through the documentation relating [VS Code's Extension API](https://code.visualstudio.com/api).
-
-1. **Support the Language `HDL` snippets**
-
-2. **Auto load the `.tst` script to check your `.hdl` program**
-
-3. **Auto load the `.tst` script to check your `.asm` program**
-
-4. **Quckly `compress` the course source to a `zip` that can easily commit**
-
-5. **Auto add necessary files like `prog.txt` into `zip` when compress the source**
-
-## Run Code
-
-* **Install [Java Runtime Environment](https://www.java.com/en/download/manual.jsp)**
-
-* **Click the `Run Code` Button**
-
-## Commands
-
-* **Nand2Tetris: Run Code**
-
-    Run the HDL Code.
-
-* **Nand2Tetris: Open Hardware Simulator**
-
-    Open the Hardware Simulator.
-
-* **Nand2Tetris: Open Assembler Simulator**
-
-    Open the Assembler Simulator.
-
-* **Nand2Tetris: Open CPU Simulator**
-
-    Open the CPU Simulator.
-
-* **Nand2Tetris: Stop Running**
-
-    Stop Running Code.
-
-* **Nand2Tetris: Compress course source to a zip**
-
-    Quckly Compress the course source.
