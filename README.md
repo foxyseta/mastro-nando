@@ -1,6 +1,6 @@
 # Mastro NANDo
 
-Yet another Visual Studio Code extenstion for [https://www.nand2tetris.org/](Nand2Tetris development).
+Yet another Visual Studio Code extenstion for [Nand2Tetris](https://www.nand2tetris.org/) development.
 
 ## Features
 
