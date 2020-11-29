@@ -111,12 +111,68 @@
                 "configuration": "./language-configuration.json"
             },
             {
+                "id": "tst",
+                "aliases": [
+                    "TST",
+                    "tst"
+                ],
+                "extensions": [
+                    ".tst"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "cmp",
+                "aliases": [
+                    "CMP",
+                    "cmp"
+                ],
+                "extensions": [
+                    ".cmp"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "out",
+                "aliases": [
+                    "OUT",
+                    "out"
+                ],
+                "extensions": [
+                    ".out"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
                 "id": "asm",
                 "aliases": [
-                    "ASM"
+                    "ASM",
+                    "asm"
                 ],
                 "extensions": [
                     ".asm"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "vm",
+                "aliases": [
+                    "VM",
+                    "vm"
+                ],
+                "extensions": [
+                    ".vm"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "jack",
+                "aliases": [
+                    "JACK",
+                    "jack"
+                ],
+                "extensions": [
+                    ".jack"
                 ],
                 "configuration": "./language-configuration.json"
             }
@@ -126,6 +182,36 @@
                 "language": "hdl",
                 "scopeName": "source.hdl",
                 "path": "./syntaxes/hdl.tmLanguage.json"
+            },
+            {
+                "language": "tst",
+                "scopeName": "source.tst",
+                "path": "./syntaxes/tst.tmLanguage.json"
+            },
+            {
+                "language": "cmp",
+                "scopeName": "source.cmp",
+                "path": "./syntaxes/cmp-out.tmLanguage.json"
+            },
+            {
+                "language": "out",
+                "scopeName": "source.out",
+                "path": "./syntaxes/cmp-out.tmLanguage.json"
+            },
+            {
+                "language": "asm",
+                "scopeName": "source.asm",
+                "path": "./syntaxes/asm.tmLanguage.json"
+            },
+            {
+                "language": "vm",
+                "scopeName": "source.vm",
+                "path": "./syntaxes/vm.tmLanguage.json"
+            },
+            {
+                "language": "jack",
+                "scopeName": "source.jack",
+                "path": "./syntaxes/jack.tmLanguage.json"
             }
         ],
         "snippets": [
