@@ -13,9 +13,10 @@ export class Commands implements vscode.Disposable {
     private document: vscode.TextDocument;
     private platform: string;
     private extensionPath: string;
-    private assemblerCmd: string;
-    private CPUCmd: string;
     private hardwareCmd: string;
+    private CPUCmd: string;
+    private VMCmd: string;
+    private assemblerCmd: string;
     private isRunning: boolean;
     private isCompressing: boolean;
     private isSuccess: boolean;
@@ -49,6 +50,24 @@ export class Commands implements vscode.Disposable {
                         + this.extensionPath + "/bin/lib/Simulators.jar" + symbol
                         + this.extensionPath + "/bin/lib/SimulatorsGUI.jar" + symbol
                         + this.extensionPath + "/bin/lib/Compilers.jar\" HardwareSimulatorMain ";
+                        
+        this.CPUCmd = "java -classpath \"${CLASSPATH}" + symbol
+                        + this.extensionPath + symbol
+                        + this.extensionPath + "/bin/classes" + symbol
+                        + this.extensionPath + "/bin/lib/Hack.jar" + symbol
+                        + this.extensionPath + "/bin/lib/HackGUI.jar" + symbol
+                        + this.extensionPath + "/bin/lib/Simulators.jar" + symbol
+                        + this.extensionPath + "/bin/lib/SimulatorsGUI.jar" + symbol
+                        + this.extensionPath + "/bin/lib/Compilers.jar\" CPUEmulatorMain ";
+
+        this.VMCmd = "java -classpath \"${CLASSPATH}" + symbol
+                        + this.extensionPath + symbol
+                        + this.extensionPath + "/bin/classes" + symbol
+                        + this.extensionPath + "/bin/lib/Hack.jar" + symbol
+                        + this.extensionPath + "/bin/lib/HackGUI.jar" + symbol
+                        + this.extensionPath + "/bin/lib/Simulators.jar" + symbol
+                        + this.extensionPath + "/bin/lib/SimulatorsGUI.jar" + symbol
+                        + this.extensionPath + "/bin/lib/Compilers.jar\" VMEmulatorMain ";
 
         this.assemblerCmd = "java -classpath \"${CLASSPATH}" + symbol
                     + this.extensionPath + symbol
@@ -58,15 +77,6 @@ export class Commands implements vscode.Disposable {
                     + this.extensionPath + "/bin/lib/Compilers.jar" + symbol
                     + this.extensionPath + "/bin/lib/AssemblerGUI.jar" + symbol
                     + this.extensionPath + "/bin/lib/TranslatorsGUI.jar\" HackAssemblerMain ";
-
-        this.CPUCmd = "java -classpath \"${CLASSPATH}" + symbol
-                    + this.extensionPath + symbol
-                    + this.extensionPath + "/bin/classes" + symbol
-                    + this.extensionPath + "/bin/lib/Hack.jar" + symbol
-                    + this.extensionPath + "/bin/lib/HackGUI.jar" + symbol
-                    + this.extensionPath + "/bin/lib/Simulators.jar" + symbol
-                    + this.extensionPath + "/bin/lib/SimulatorsGUI.jar" + symbol
-                    + this.extensionPath + "/bin/lib/Compilers.jar\" CPUEmulatorMain ";
 
         this.zipSource = JSON.parse(fs.readFileSync(this.extensionPath + "/assets/zip.json").toString());
     }
@@ -90,10 +100,15 @@ export class Commands implements vscode.Disposable {
         const fileName = filePath.name + filePath.ext;
         const execName = join(filePath.dir, filePath.name).replace(/ /g, "\" \"").replace(/\\/g, "/");
         let command: string;
-        if (filePath.ext === ".hdl") {
-            command = this.hardwareCmd + execName + ".tst";
-        } else if (filePath.ext === ".asm") {
-            command = this.assemblerCmd + execName + ".asm" + " & " + this.CPUCmd + execName + ".tst";
+        switch (filePath.ext) {
+            case ".hdl":
+                command = this.hardwareCmd + execName + ".tst";    
+                break;
+            case ".asm":
+                command = this.assemblerCmd + execName + ".asm & " + this.CPUCmd + execName + ".tst";
+                break;
+            case ".vm":
+                command = this.VMCmd + execName + ".vm & " + this.VMCmd + execName + ".tst";
         }
 
         this.config = vscode.workspace.getConfiguration("nand2tetris");
@@ -113,14 +128,19 @@ export class Commands implements vscode.Disposable {
         this.terminal.sendText(this.hardwareCmd);
     }
 
-    public executeAssemblerCommand(): void {
-        this.terminal.sendText(`cd "${this.extensionPath}"`);
-        this.terminal.sendText(this.assemblerCmd);
-    }
-
     public executeCPUCommand(): void {
         this.terminal.sendText(`cd "${this.extensionPath}"`);
         this.terminal.sendText(this.CPUCmd);
+    }
+
+    public executeVMCommand(): void {
+        this.terminal.sendText(`cd "${this.extensionPath}"`);
+        this.terminal.sendText(this.VMCmd);
+    }
+
+    public executeAssemblerCommand(): void {
+        this.terminal.sendText(`cd "${this.extensionPath}"`);
+        this.terminal.sendText(this.assemblerCmd);
     }
 
     public stopCommand() {
