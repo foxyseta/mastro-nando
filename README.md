@@ -47,4 +47,4 @@ You may also visit the [Visual Studio Code Marketplace](https://marketplace.visu
 
 ## Contributor setup
 
-After cloning this [GitHub repository](https://github.com/foxyseta/mastro-nando), you might want to follow through the documentation relating [VS Code's Extension API](https://code.visualstudio.com/api).
+After cloning this [GitHub repository](https://github.com/foxyseta/mastro-nando), you might want to follow through with the documentation relating [VS Code's Extension API](https://code.visualstudio.com/api).
