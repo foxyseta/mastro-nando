@@ -1,7 +1,8 @@
 {
     "01": {
         "extension": [
-            ".hdl"
+            "hdl",
+            "HDL"
         ]
     },
     "02": {
@@ -30,11 +31,49 @@
     },
     "06": {
         "extension": [
-            "hack",
-            "HACK"
         ],
         "extrafile": [
             "prog.txt"
+        ]
+    },
+    "07": {
+        "extension": [
+        ],
+        "extrafile": [
+            "prog.txt"
+        ]
+    },
+    "08": {
+        "extension": [
+        ],
+        "extrafile": [
+            "prog.txt"
+        ]
+    },
+    "09": {
+        "extension": [
+            "jack",
+            "JACK"
+        ]
+    },
+    "10": {
+        "extension": [
+        ],
+        "extrafile": [
+            "prog.txt"
+        ]
+    },
+    "11": {
+        "extension": [
+        ],
+        "extrafile": [
+            "prog.txt"
+        ]
+    },
+    "12": {
+        "extension": [
+            "jack",
+            "JACK"
         ]
     }
 }
