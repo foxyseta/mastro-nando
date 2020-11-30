@@ -23,15 +23,17 @@ Jack Language | `.jack` | ✔︎ |
 
 ### Commands
 
-Name | Requires Nand to Tetris Software Suite | Description
----- | -------------------------------------- | -----------
-Run Code ![Run Code button](images/button.png) | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `hack`, `.vm`) via CLI
-Open Hardware Simulator | ✔︎ | Runs the Hardware Simulator via GUI
-Open CPU Emulator | ✔︎ | Runs the CPU Simulator via GUI
-Open VM Emulator | ✔︎ | Runs the VM Emulator via GUI
-Assembler | ✔︎ | Runs the Assembler via GUI
-Stop Running | ✔︎ | Aborts code execution
-Zip course source | | Compresses your solution to a zip archive
+Name | Icon | Requires Nand to Tetris Software Suite | Description
+---- | ---- | ------------------------------- | -----------
+Run code | ![Run Code button](images/button.png) | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `hack` and `.vm` files) via CLI
+Stop running | | ✔︎ | Aborts code execution
+Translate code | ![Translate Code button](images/button2.png) | ✔︎ | Translate your current file (supports `.asm` and `jack` files) via CLI
+Open Hardware Simulator | | ✔︎ | Runs the Hardware Simulator via GUI
+Open CPU Emulator | | ✔︎ | Runs the CPU Simulator via GUI
+Open VM Emulator | | ✔︎ | Runs the VM Emulator via GUI
+Assembler | | ✔︎ | Runs the Assembler via GUI
+Compile directory | | ✔︎ | Compiles the directory of your current file (supports `.jack` files)
+Zip course source | | | Compresses your solution to a zip archive
 
 ## User setup
 

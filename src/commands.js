@@ -66,6 +66,11 @@ class Commands {
             + this.extensionPath + "/bin/lib/Compilers.jar" + symbol
             + this.extensionPath + "/bin/lib/AssemblerGUI.jar" + symbol
             + this.extensionPath + "/bin/lib/TranslatorsGUI.jar\" HackAssemblerMain ";
+        this.compilerCmd = "java -classpath \"${CLASSPATH}" + symbol
+            + this.extensionPath + symbol
+            + this.extensionPath + "/bin/classes" + symbol
+            + this.extensionPath + "/bin/lib/Hack.jar" + symbol
+            + this.extensionPath + "/bin/lib/Compilers.jar\" Hack.Compiler.JackCompiler ";
         this.zipSource = JSON.parse(fs.readFileSync(this.extensionPath + "/assets/zip.json").toString());
     }
     executeCommand(fileUri) {
@@ -97,10 +102,10 @@ class Commands {
                     command = this.assemblerCmd + execName + ".asm & " + this.CPUCmd + execName + ".tst";
                     break;
                 case ".hack":
-                    command = this.assemblerCmd + execName + ".hack & " + this.CPUCmd + execName + ".tst";
+                    command = this.CPUCmd + execName + ".tst";
                     break;
                 case ".vm":
-                    command = this.VMCmd + execName + ".vm & " + this.VMCmd + execName + ".tst";
+                    command = this.VMCmd + execName + ".tst";
             }
             this.config = vscode.workspace.getConfiguration("nand2tetris");
             const runInTerminal = this.config.get("runInTerminal");
@@ -114,7 +119,43 @@ class Commands {
             }
         });
     }
-    executeHarderwareCommand() {
+    translateCommand(fileUri) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const editor = vscode.window.activeTextEditor;
+            if (fileUri && editor && fileUri.fsPath !== editor.document.uri.fsPath) {
+                this.document = yield vscode.workspace.openTextDocument(fileUri);
+            }
+            else if (editor) {
+                this.document = editor.document;
+            }
+            else {
+                vscode.window.showInformationMessage("No code found or selected.");
+                return;
+            }
+            const filePath = path_1.parse(this.document.fileName);
+            const fileName = filePath.name + filePath.ext;
+            const execName = path_1.join(filePath.dir, filePath.name).replace(/ /g, "\" \"").replace(/\\/g, "/");
+            let command;
+            switch (filePath.ext) {
+                case ".asm":
+                    command = this.assemblerCmd + execName + ".asm";
+                    break;
+                case ".jack":
+                    command = this.compilerCmd + execName + ".jack";
+            }
+            this.config = vscode.workspace.getConfiguration("nand2tetris");
+            const runInTerminal = this.config.get("runInTerminal");
+            const clearPreviousOutput = this.config.get("clearPreviousOutput");
+            const preserveFocus = this.config.get("preserveFocus");
+            if (runInTerminal) {
+                this.executeCommandInTerminal(command, clearPreviousOutput, preserveFocus);
+            }
+            else {
+                this.executeCommandInOutputChannel(fileName, command, clearPreviousOutput, preserveFocus);
+            }
+        });
+    }
+    executeHardwareCommand() {
         this.terminal.sendText(`cd "${this.extensionPath}"`);
         this.terminal.sendText(this.hardwareCmd);
     }
@@ -209,6 +250,22 @@ class Commands {
             }
             else {
                 this.zipCommandInOutputChannel(command, outputName, clearPreviousOutput, preserveFocus);
+            }
+        });
+    }
+    compilerDirectoryCommand() {
+        return __awaiter(this, void 0, void 0, function* () {
+            this.document = vscode.window.activeTextEditor.document;
+            let command = this.compilerCmd + path_1.parse(this.document.fileName).dir;
+            this.config = vscode.workspace.getConfiguration("nand2tetris");
+            const runInTerminal = this.config.get("runInTerminal");
+            const clearPreviousOutput = this.config.get("clearPreviousOutput");
+            const preserveFocus = this.config.get("preserveFocus");
+            if (runInTerminal) {
+                this.executeCommandInTerminal(command, clearPreviousOutput, preserveFocus);
+            }
+            else {
+                this.executeCommandInOutputChannel(fileName, command, clearPreviousOutput, preserveFocus);
             }
         });
     }

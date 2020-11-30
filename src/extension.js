@@ -8,8 +8,14 @@ function activate(context) {
     const run = vscode.commands.registerCommand("nand2tetris.run", (fileUri) => {
         commands.executeCommand(fileUri);
     });
+    const stop = vscode.commands.registerCommand("nand2tetris.stop", () => {
+        commands.stopCommand();
+    });
+    const translate = vscode.commands.registerCommand("nand2tetris.translate", (fileUri) => {
+        commands.translateCommand(fileUri);
+    });
     const hardware = vscode.commands.registerCommand("nand2tetris.hardware", (fileUri) => {
-        commands.executeHarderwareCommand();
+        commands.executeHardwareCommand();
     });
     const cpu = vscode.commands.registerCommand("nand2tetris.cpu", (fileUri) => {
         commands.executeCPUCommand();
@@ -20,13 +26,14 @@ function activate(context) {
     const assembler = vscode.commands.registerCommand("nand2tetris.assembler", (fileUri) => {
         commands.executeAssemblerCommand();
     });
-    const stop = vscode.commands.registerCommand("nand2tetris.stop", () => {
-        commands.stopCommand();
-    });
     const zip = vscode.commands.registerCommand("nand2tetris.zip", () => {
         commands.zipCommand();
     });
+    const compile = vscode.commands.registerCommand("nand2tetris.compiler", () => {
+        commands.compilerDirectoryCommand();
+    });
     context.subscriptions.push(run);
+    context.subscriptions.push(translate);
     context.subscriptions.push(commands);
 }
 exports.activate = activate;

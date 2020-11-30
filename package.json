@@ -41,32 +41,41 @@
         "commands": [
             {
                 "command": "nand2tetris.run",
-                "title": "Nand2Tetris: Run Code",
+                "title": "Nand2Tetris: run code",
                 "icon": "./images/button.png"
             },
             {
+                "command": "nand2tetris.stop",
+                "title": "Nand2Tetris: stop running"
+            },
+            {
+                "command": "nand2tetris.translate",
+                "title": "Nand2Tetris: translate code",
+                "icon": "./images/button2.png"
+            },
+            {
                 "command": "nand2tetris.hardware",
-                "title": "Nand2Tetris: Open Hardware Simulator"
+                "title": "Nand2Tetris: open Hardware Simulator"
             },
             {
                 "command": "nand2tetris.cpu",
-                "title": "Nand2Tetris: Open CPU Emulator"
+                "title": "Nand2Tetris: open CPU Emulator"
             },
             {
                 "command": "nand2tetris.vm",
-                "title": "Nand2Tetris: Open VM Emulator"
+                "title": "Nand2Tetris: open VM Emulator"
             },
             {
                 "command": "nand2tetris.assembler",
-                "title": "Nand2Tetris: Open Assembler"
+                "title": "Nand2Tetris: open Assembler"
             },
             {
-                "command": "nand2tetris.stop",
-                "title": "Nand2Tetris: Stop Running"
+                "command": "nand2tetris.compiler",
+                "title": "Nand2Tetris: compile directory"
             },
             {
                 "command": "nand2tetris.zip",
-                "title": "Nand2Tetris: Zip course source"
+                "title": "Nand2Tetris: zip course source"
             }
         ],
         "menus": {
@@ -82,6 +91,11 @@
                     "group": "navigation"
                 },
                 {
+                    "when": "resourceLangId == asm && config.nand2tetris.showTranslateIconInEditorTitleMenu",
+                    "command": "nand2tetris.translate",
+                    "group": "navigation"
+                },
+                {
                     "when": "resourceLangId == hack && config.nand2tetris.showRunIconInEditorTitleMenu",
                     "command": "nand2tetris.run",
                     "group": "navigation"
@@ -89,6 +103,11 @@
                 {
                     "when": "resourceLangId == vm && config.nand2tetris.showRunIconInEditorTitleMenu",
                     "command": "nand2tetris.run",
+                    "group": "navigation"
+                },
+                {
+                    "when": "resourceLangId == jack && config.nand2tetris.showTranslateIconInEditorTitleMenu",
+                    "command": "nand2tetris.translate",
                     "group": "navigation"
                 }
             ]
@@ -100,7 +119,13 @@
                 "nand2tetris.showRunIconInEditorTitleMenu": {
                     "type": "boolean",
                     "default": true,
-                    "description": "Whether to show 'HDL Run Code' icon in editor title menu.",
+                    "description": "Whether to show 'Run Code' icon in editor title menu.",
+                    "scope": "resource"
+                },
+                "nand2tetris.showTranslateIconInEditorTitleMenu": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to show 'Translate Code' icon in editor title menu.",
                     "scope": "resource"
                 },
                 "nand2tetris.runInTerminal": {
@@ -264,11 +289,13 @@
     },
     "activationEvents": [
         "onCommand:nand2tetris.run",
+        "onCommand:nand2tetris.stop",
+        "onCommand:nand2tetris.translate",
         "onCommand:nand2tetris.hardware",
         "onCommand:nand2tetris.cpu",
         "onCommand:nand2tetris.vm",
         "onCommand:nand2tetris.assembler",
-        "onCommand:nand2tetris.stop",
+        "onCommand:nand2tetris.compiler",
         "onCommand:nand2tetris.zip"
     ],
     "dependencies": {
