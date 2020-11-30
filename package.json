@@ -36,7 +36,7 @@
         "color": "#555555",
         "theme": "light"
     },
-    "main": "./out/extension",
+    "main": "./src/extension.js",
     "contributes": {
         "commands": [
             {
