@@ -15,7 +15,7 @@ const vscode = require("vscode");
 const fs = require("fs");
 class Commands {
     constructor() {
-        this.EXTENSION_NAME = "leafvmaple.nand2tetris";
+        this.EXTENSION_NAME = "foxyseta.mastro-nando";
         this.LANGUAGE_NAME = "Nand2Tetris";
         let symbol;
         this.platform = process.platform;

@@ -6,7 +6,7 @@
         "vscode": "^1.51.0"
     },
     "displayName": "Nand2Tetris Tools",
-    "description": "A Visual Studio Code extenstion for Nand2Tetris development based on Zohar Lee's 'Nand2Tetris Tools'.",
+    "description": "A Visual Studio Code extension for Nand2Tetris development based on Zohar Lee's 'Nand2Tetris Tools'.",
     "author": {
         "name": "Stefano Volpe"
     },
