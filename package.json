@@ -25,10 +25,10 @@
         "type": "git",
         "url": "https://github.com/foxyseta/mastro-nando"
     },
-    "homepage": "https://github.com/FoxySeta/mastro-nando/blob/master/README.md",
+    "homepage": "https://github.com/foxyseta/mastro-nando/blob/master/README.md",
     "license": "SEE LICENSE IN 'LICENSE'",
     "bugs": {
-        "url": "https://github.com/FoxySeta/mastro-nando/issues",
+        "url": "https://github.com/foxyseta/mastro-nando/issues",
         "email": "stefano.volpe2@studio.unibo.it"
     },
     "icon": "images/icon.png",
@@ -78,6 +78,16 @@
                 },
                 {
                     "when": "resourceLangId == asm && config.nand2tetris.showRunIconInEditorTitleMenu",
+                    "command": "nand2tetris.run",
+                    "group": "navigation"
+                },
+                {
+                    "when": "resourceLangId == hack && config.nand2tetris.showRunIconInEditorTitleMenu",
+                    "command": "nand2tetris.run",
+                    "group": "navigation"
+                },
+                {
+                    "when": "resourceLangId == vm && config.nand2tetris.showRunIconInEditorTitleMenu",
                     "command": "nand2tetris.run",
                     "group": "navigation"
                 }
@@ -170,6 +180,17 @@
                 "configuration": "./language-configuration.json"
             },
             {
+                "id": "hack",
+                "aliases": [
+                    "HACK",
+                    "hack"
+                ],
+                "extensions": [
+                    ".hack"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
                 "id": "vm",
                 "aliases": [
                     "VM",
@@ -217,6 +238,11 @@
                 "language": "asm",
                 "scopeName": "source.asm",
                 "path": "./syntaxes/asm.tmLanguage.json"
+            },
+            {
+                "language": "hack",
+                "scopeName": "source.hack",
+                "path": "./syntaxes/hack.tmLanguage.json"
             },
             {
                 "language": "vm",

@@ -17,6 +17,7 @@ Hardware Description Language | `.hdl` | ✔︎ | ✔︎
 Test scripts format | `.tst` | ✔︎ | 
 Compare and output files format | `.cmp`, `.out` | ✔︎ | 
 Hack Assembly | `.asm` | ✔︎ | 
+Hack Machine Language | `.hack` | ✔︎ | 
 Hack Virtual Machine Language | `.vm` | ✔︎ | 
 Jack Language | `.jack` | ✔︎ | 
 
@@ -24,7 +25,7 @@ Jack Language | `.jack` | ✔︎ |
 
 Name | Requires Nand to Tetris Software Suite | Description
 ---- | -------------------------------------- | -----------
-Run Code ![Run Code button](images/button.png) | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `.vm`) via CLI
+Run Code ![Run Code button](images/button.png) | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `hack`, `.vm`) via CLI
 Open Hardware Simulator | ✔︎ | Runs the Hardware Simulator via GUI
 Open CPU Emulator | ✔︎ | Runs the CPU Simulator via GUI
 Open VM Emulator | ✔︎ | Runs the VM Emulator via GUI

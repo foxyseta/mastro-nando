@@ -96,6 +96,9 @@ class Commands {
                 case ".asm":
                     command = this.assemblerCmd + execName + ".asm & " + this.CPUCmd + execName + ".tst";
                     break;
+                case ".hack":
+                    command = this.assemblerCmd + execName + ".hack & " + this.CPUCmd + execName + ".tst";
+                    break;
                 case ".vm":
                     command = this.VMCmd + execName + ".vm & " + this.VMCmd + execName + ".tst";
             }
