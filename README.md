@@ -31,13 +31,13 @@ Zip course source | | | Compresses your solution to a zip archive
 
 Language | File Extensions | Grammar | Snippets | Icon
 -------- | --------------- | ------- | -------- | ----
-Hardware Description Language | `.hdl` | ✔︎ | ✔︎ | ![Hardware Description Language icon](./fileicons/images/hdl.svg)
-Test scripts format | `.tst` | ✔︎ | ✔︎ | ![Test scripts format icon](./fileicons/images/tst.svg)
-Compare and output files format | `.cmp`, `.out` | ✔︎ | | ![Compare and output files format icon](./fileicons/images/cmp-out.svg)
-Hack Assembly | `.asm` | ✔︎ | ✔︎ | fallback
-Hack Machine Language | `.hack` | ✔︎ | | ![Hack Machine Language icon](./fileicons/images/hack.svg)
-Hack Virtual Machine Language | `.vm` | ✔︎ | ✔︎ | ![Hack Virtual Machine Language icon](./fileicons/images/vm.svg)
-Jack Language | `.jack` | ✔︎ | ✔︎ | ![jack Language icon](./fileicons/images/jack.svg)
+Hardware Description Language | `.hdl` | ✔︎ | ✔︎ | ✔︎
+Test scripts format | `.tst` | ✔︎ | ✔︎ | ✔︎
+Compare and output files format | `.cmp`, `.out` | ✔︎ | | ✔︎
+Hack Assembly | `.asm` | ✔︎ | ✔︎ | 
+Hack Machine Language | `.hack` | ✔︎ | | ✔︎
+Hack Virtual Machine Language | `.vm` | ✔︎ | ✔︎ | ✔︎
+Jack Language | `.jack` | ✔︎ | ✔︎ | ✔︎
 
 Any icons not listed in the table above have been included in the extension from [VS Code's built-in icon theme Seti](https://github.com/microsoft/vscode/tree/master/extensions/theme-seti).
 
