@@ -283,7 +283,23 @@
         "snippets": [
             {
                 "language": "hdl",
-                "path": "./snippets/snippets.json"
+                "path": "./snippets/hdl.snippets.json.code-snippets"
+            },
+            {
+                "language": "tst",
+                "path": "./snippets/tst.snippets.json.code-snippets"
+            },
+            {
+                "language": "asm",
+                "path": "./snippets/asm.snippets.json.code-snippets"
+            },
+            {
+                "language": "vm",
+                "path": "./snippets/vm.snippets.json.code-snippets"
+            },
+            {
+                "language": "jack",
+                "path": "./snippets/jack.snippets.json.code-snippets"
             }
         ],
         "iconThemes": [
