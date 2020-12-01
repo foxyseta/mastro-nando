@@ -285,6 +285,13 @@
                 "language": "hdl",
                 "path": "./snippets/snippets.json"
             }
+        ],
+        "iconThemes": [
+            {
+                "id": "mastro-nando",
+                "label": "Mastro NANDo Icon Theme",
+                "path": "./fileicons/icon-theme.json"
+            }
         ]
     },
     "activationEvents": [
@@ -303,13 +310,13 @@
         "compressing": "^1.4.0"
     },
     "devDependencies": {
-        "@types/vscode": "^1.51.0",
         "@types/glob": "^7.1.3",
         "@types/mocha": "^8.0.0",
-        "@types/node": "^12.11.7",
-        "eslint": "^7.9.0",
+        "@types/node": "^12.19.8",
+        "@types/vscode": "^1.51.0",
         "@typescript-eslint/eslint-plugin": "^4.1.1",
         "@typescript-eslint/parser": "^4.1.1",
+        "eslint": "^7.9.0",
         "glob": "^7.1.6",
         "mocha": "^8.1.3",
         "typescript": "^4.0.2",

@@ -4,22 +4,10 @@
 
 ## Introduction
 
-A [Visual Studio Code](https://code.visualstudio.com/) extension for [Nand2Tetris](https://www.nand2tetris.org/) development based on [Zohar Lee](https://github.com/leafvmaple/)'s ["Nand2Tetris Tools"](https://github.com/leafvmaple/vscode-nand2tetris).
+Mastro NANDo is a [Visual Studio Code](https://code.visualstudio.com/) extension for [Nand2Tetris](https://www.nand2tetris.org/) development based on [Zohar Lee](https://github.com/leafvmaple/)'s ["Nand2Tetris Tools"](https://github.com/leafvmaple/vscode-nand2tetris).
 It empowers an incorporated release of the [Nand to Tetris Software Suite](https://www.nand2tetris.org/software) with various Visual Studio Code functionalities. This extension is meant for students, instructors, and self-learners who want to enhance their Nand2Tetris experience.
 
 ## Features
-
-### Languages
-
-Language | File Extensions | Grammar | Snippets
--------- | --------------- | ------- | --------
-Hardware Description Language | `.hdl` | ✔︎ | ✔︎
-Test scripts format | `.tst` | ✔︎ | 
-Compare and output files format | `.cmp`, `.out` | ✔︎ | 
-Hack Assembly | `.asm` | ✔︎ | 
-Hack Machine Language | `.hack` | ✔︎ | 
-Hack Virtual Machine Language | `.vm` | ✔︎ | 
-Jack Language | `.jack` | ✔︎ | 
 
 ### Commands
 
@@ -34,6 +22,20 @@ Open VM Emulator | | ✔︎ | Runs the VM Emulator via GUI
 Assembler | | ✔︎ | Runs the Assembler via GUI
 Compile directory | | ✔︎ | Compiles the directory of your current file (supports `.jack` files)
 Zip course source | | | Compresses your solution to a zip archive
+
+### Languages and icon theme
+
+Language | File Extensions | Grammar | Snippets | Icon
+-------- | --------------- | ------- | -------- | ----
+Hardware Description Language | `.hdl` | ✔︎ | ✔︎ | ![Hardware Description Language icon](./fileicons/images/hdl.svg)
+Test scripts format | `.tst` | ✔︎ | | ![Test scripts format icon](./fileicons/images/tst.svg)
+Compare and output files format | `.cmp`, `.out` | ✔︎ | | ![Compare and output files format icon](./fileicons/images/cmp-out.svg)
+Hack Assembly | `.asm` | ✔︎ | | fallback
+Hack Machine Language | `.hack` | ✔︎ | | ![Hack Machine Language icon](./fileicons/images/hack.svg)
+Hack Virtual Machine Language | `.vm` | ✔︎ | | ![Hack Virtual Machine Language icon](./fileicons/images/vm.svg)
+Jack Language | `.jack` | ✔︎ | | ![jack Language icon](./fileicons/images/jack.svg)
+
+Any icons not listed in the table above have been included in the extensions from [VS Code's built-in icon theme Seti](https://github.com/microsoft/vscode/tree/master/extensions/theme-seti).
 
 ## User setup
 
