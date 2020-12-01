@@ -2,6 +2,10 @@
 
 ![Mastro NANDo Logo](images/icon.png)
 
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/foxyseta.mastro-nando)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/foxyseta.mastro-nando)
+![Visual Studio MarketPlace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/foxyseta.mastro-nando)
+
 ## Introduction
 
 Mastro NANDo is a [Visual Studio Code](https://code.visualstudio.com/) extension for [Nand2Tetris](https://www.nand2tetris.org/) development based on [Zohar Lee](https://github.com/leafvmaple/)'s ["Nand2Tetris Tools"](https://github.com/leafvmaple/vscode-nand2tetris).
