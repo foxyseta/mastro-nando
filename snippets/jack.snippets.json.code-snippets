@@ -6,7 +6,7 @@
         ],
         "body": [
             "class ${1:Name} {",
-            "\t${0:$LINE_COMMENT attributes and methods",
+            "\t${0:$LINE_COMMENT attributes and methods}",
             "}"
         ],
         "description": "A class interface." 
@@ -14,6 +14,7 @@
     "Function/method": {
         "prefix": [
             "function",
+            "method",
             "procedure",
             "void",
             "int",

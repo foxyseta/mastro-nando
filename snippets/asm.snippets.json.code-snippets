@@ -6,7 +6,7 @@
             "condition"
         ],
         "body": [
-            "\t{1:$LINE_COMMENT D = condition}",
+            "\t${1:$LINE_COMMENT D = condition}",
             "\t@${2:IF_END}",
             "\tD;JEQ",
             "\t${0:$LINE_COMMENT code}",
@@ -23,7 +23,7 @@
             "condition"
         ],
         "body": [
-            "\t{1:$LINE_COMMENT D = condition}",
+            "\t${1:$LINE_COMMENT D = condition}",
             "\t@${2:IF_ELSE}",
             "\tD;JEQ",
             "\t${4:$LINE_COMMENT code}",
@@ -44,7 +44,7 @@
         ],
         "body": [
             "(${1:LOOP})",
-            "\t{2:$LINE_COMMENT D = condition}",
+            "\t${2:$LINE_COMMENT D = condition}",
             "\t@${3:LOOP_END}",
             "\tD;JEQ",
             "\t${0:$LINE_COMMENT code}",
