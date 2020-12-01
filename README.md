@@ -35,7 +35,7 @@ Hack Machine Language | `.hack` | ✔︎ | | ![Hack Machine Language icon](./fil
 Hack Virtual Machine Language | `.vm` | ✔︎ | | ![Hack Virtual Machine Language icon](./fileicons/images/vm.svg)
 Jack Language | `.jack` | ✔︎ | | ![jack Language icon](./fileicons/images/jack.svg)
 
-Any icons not listed in the table above have been included in the extensions from [VS Code's built-in icon theme Seti](https://github.com/microsoft/vscode/tree/master/extensions/theme-seti).
+Any icons not listed in the table above have been included in the extension from [VS Code's built-in icon theme Seti](https://github.com/microsoft/vscode/tree/master/extensions/theme-seti).
 
 ## User setup
 
