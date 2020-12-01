@@ -1,11 +1,11 @@
 {
     "name": "mastro-nando",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "foxyseta",
     "engines": {
         "vscode": "^1.51.0"
     },
-    "displayName": "Nand2Tetris Tools",
+    "displayName": "Mastro NANDo",
     "description": "A Visual Studio Code extension for Nand2Tetris development based on Zohar Lee's 'Nand2Tetris Tools'.",
     "author": {
         "name": "Stefano Volpe"
@@ -34,7 +34,7 @@
     "icon": "images/icon.png",
     "galleryBanner": {
         "color": "#555555",
-        "theme": "light"
+        "theme": "dark"
     },
     "main": "./src/extension.js",
     "contributes": {
@@ -114,7 +114,7 @@
         },
         "configuration": {
             "type": "object",
-            "title": "Nand2Tetris configuration",
+            "title": "Mastro NANDo",
             "properties": {
                 "nand2tetris.showRunIconInEditorTitleMenu": {
                     "type": "boolean",
