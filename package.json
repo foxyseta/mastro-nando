@@ -179,8 +179,7 @@
                 ],
                 "extensions": [
                     ".cmp"
-                ],
-                "configuration": "./language-configuration.json"
+                ]
             },
             {
                 "id": "out",
@@ -190,8 +189,7 @@
                 ],
                 "extensions": [
                     ".out"
-                ],
-                "configuration": "./language-configuration.json"
+                ]
             },
             {
                 "id": "asm",
@@ -212,8 +210,7 @@
                 ],
                 "extensions": [
                     ".hack"
-                ],
-                "configuration": "./language-configuration.json"
+                ]
             },
             {
                 "id": "vm",
