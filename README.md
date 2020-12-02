@@ -54,7 +54,7 @@ There is no need to manually install the Nand to Tetris Software Suite, as it is
 ### Installation
 
 Please launch VS Code Quick Open (`Ctrl` + `P`), digit `ext install foxyseta.mastro-nando`, and press enter.
-You may also visit the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items/foxyseta/mastro-nando) for further support.
+You may also visit the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=foxyseta.mastro-nando) for further support.
 
 ## Contributor setup
 
