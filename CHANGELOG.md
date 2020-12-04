@@ -1,5 +1,9 @@
 # Mastro NANDo Change Log
 
+## Version 1.1.0: December 04, 2020
+* Add error codes for incorrect file types
+* Add details about the "Run code" command to the README
+
 ## Version 1.0.2: December 04, 2020
 * Fix changelog
 * Fix failing commands execution

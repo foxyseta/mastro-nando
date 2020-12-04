@@ -106,6 +106,9 @@ class Commands {
                     break;
                 case ".vm":
                     command = this.VMCmd + execName + ".tst";
+                default:
+                    vscode.window.showInformationMessage("No .hdl/.asm/.hack/.vm code found or selected.");
+                    return;
             }
             this.config = vscode.workspace.getConfiguration("nand2tetris");
             const runInTerminal = this.config.get("runInTerminal");
@@ -142,6 +145,10 @@ class Commands {
                     break;
                 case ".jack":
                     command = this.compilerCmd + execName + ".jack";
+                    break;
+                default:
+                    vscode.window.showInformationMessage("No .asm/.jack code found or selected.");
+                    return;
             }
             this.config = vscode.workspace.getConfiguration("nand2tetris");
             const runInTerminal = this.config.get("runInTerminal");

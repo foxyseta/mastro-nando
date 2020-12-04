@@ -17,7 +17,7 @@ It empowers an incorporated release of the [Nand to Tetris Software Suite](https
 
 Name | Icon | Requires Nand to Tetris Software Suite | Description
 ---- | ---- | ------------------------------- | -----------
-Run code | ![Run Code button](images/button.png) | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `hack` and `.vm` files) via CLI
+Run code | ![Run Code button](images/button.png) | ✔︎ | Runs your current file (supports `.hdl`, `.asm`, `hack` and `.vm` files) via CLI. Needs a `.tst` file in the same folder to work.
 Stop running | | ✔︎ | Aborts code execution
 Translate code | ![Translate Code button](images/button2.png) | ✔︎ | Translate your current file (supports `.asm` and `jack` files) via CLI
 Open Hardware Simulator | | ✔︎ | Runs the Hardware Simulator via GUI
