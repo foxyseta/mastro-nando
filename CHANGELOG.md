@@ -1,5 +1,8 @@
 # Mastro NANDo Change Log
 
+## Version 1.1.3: December 06, 2020
+* Do not assemble when running `.asm` code
+
 ## Version 1.1.2: December 06, 2020
 * `VME.tst` files now supported
 

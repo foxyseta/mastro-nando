@@ -99,8 +99,6 @@ class Commands {
                     command = this.hardwareCmd + execName + ".tst";
                     break;
                 case ".asm":
-                    command = this.assemblerCmd + execName + ".asm & " + this.CPUCmd + execName + ".tst";
-                    break;
                 case ".hack":
                     command = this.CPUCmd + execName + ".tst";
                     break;
