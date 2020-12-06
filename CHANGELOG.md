@@ -1,5 +1,8 @@
 # Mastro NANDo Change Log
 
+## Version 1.1.1: December 06, 2020
+* Fix `.vm` file not detected
+
 ## Version 1.1.0: December 04, 2020
 * Add error codes for incorrect file types
 * Add details about the "Run code" command to the README

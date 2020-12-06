@@ -106,6 +106,7 @@ class Commands {
                     break;
                 case ".vm":
                     command = this.VMCmd + execName + ".tst";
+                    break;
                 default:
                     vscode.window.showInformationMessage("No .hdl/.asm/.hack/.vm code found or selected.");
                     return;
