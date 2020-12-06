@@ -105,7 +105,7 @@ class Commands {
                     command = this.CPUCmd + execName + ".tst";
                     break;
                 case ".vm":
-                    command = this.VMCmd + execName + ".tst";
+                    command = this.VMCmd + execName + "VME.tst";
                     break;
                 default:
                     vscode.window.showInformationMessage("No .hdl/.asm/.hack/.vm code found or selected.");

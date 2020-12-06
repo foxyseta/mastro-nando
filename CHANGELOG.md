@@ -1,5 +1,8 @@
 # Mastro NANDo Change Log
 
+## Version 1.1.2: December 06, 2020
+* `VME.tst` files now supported
+
 ## Version 1.1.1: December 06, 2020
 * Fix `.vm` file not detected
 
