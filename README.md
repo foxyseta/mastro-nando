@@ -4,7 +4,6 @@
 
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/foxyseta.mastro-nando)
 ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/foxyseta.mastro-nando)
-![Visual Studio MarketPlace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/foxyseta.mastro-nando)
 
 ## Introduction
 
