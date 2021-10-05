@@ -1,5 +1,8 @@
 # Mastro NANDo Change Log
 
+## Version 1.1.4: October 05, 2021
+* Fix error on space-including extension installation path
+
 ## Version 1.1.3: December 06, 2020
 * Do not assemble when running `.asm` code
 
