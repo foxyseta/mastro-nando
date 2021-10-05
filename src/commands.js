@@ -1,14 +1,14 @@
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    function adopt(value) {return value instanceof P ? value : new P(function (resolve) {resolve(value);});}
     return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        function fulfilled(value) {try {step(generator.next(value));} catch (e) {reject(e);} }
+        function rejected(value) {try {step(generator["throw"](value));} catch (e) {reject(e);} }
+        function step(result) {result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);}
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {value: true});
 exports.Commands = void 0;
 const path_1 = require("path");
 const vscode = require("vscode");
@@ -33,7 +33,7 @@ class Commands {
         this.outputChannel = vscode.window.createOutputChannel(this.LANGUAGE_NAME);
         this.terminal = vscode.window.createTerminal(this.LANGUAGE_NAME);
         this.extensionPath = vscode.extensions.getExtension(this.EXTENSION_NAME).extensionPath;
-        this.extensionPath = this.extensionPath.replace(/ /g, "\" \"").replace(/\\/g, "/");
+        this.extensionPath = this.extensionPath.replace(/\\/g, "/");
         this.hardwareCmd = "java -classpath \"${CLASSPATH}" + symbol
             + this.extensionPath + symbol
             + this.extensionPath + "/bin/classes" + symbol
@@ -296,7 +296,7 @@ class Commands {
         this.outputChannel.appendLine(`[Running] ${fileName}`);
         const exec = require("child_process").exec;
         const startTime = new Date();
-        this.process = exec(command, { cwd: this.extensionPath });
+        this.process = exec(command, {cwd: this.extensionPath});
         this.process.stdout.on("data", (data) => {
             if (data.match("successfully")) {
                 this.isSuccess = true;
@@ -335,7 +335,7 @@ class Commands {
         this.outputChannel.appendLine(`[Compressing] ${outputName}`);
         const exec = require("child_process").exec;
         const startTime = new Date();
-        this.process = exec(command, { cwd: this.extensionPath });
+        this.process = exec(command, {cwd: this.extensionPath});
         this.process.stdout.on("data", (data) => {
             this.outputChannel.appendLine(data);
         });
