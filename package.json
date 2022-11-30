@@ -148,6 +148,12 @@
                 }
             }
         },
+        "configurationDefaults": {
+            "[hdl]": {
+                "editor.snippetSuggestions": "top",
+                "editor.suggest.snippetsPreventQuickSuggestions": false
+            }
+        },
         "languages": [
             {
                 "id": "hdl",
